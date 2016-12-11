@@ -1,0 +1,18 @@
+{
+  "name": "propertea",
+  "description": "capstone",
+  "main": "Gruntfile.js",
+  "authors": [
+    "shawnm"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

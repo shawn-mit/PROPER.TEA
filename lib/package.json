@@ -1,0 +1,22 @@
+{
+  "name": "propertea",
+  "version": "1.0.0",
+  "description": "capstone",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shawnm",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "jshint": "^2.9.4",
+    "matchdep": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jshint-stylish": "^2.2.1"
+  }
+}

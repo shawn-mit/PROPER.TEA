@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>proper.Tea</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+</head>
+
+<body ng-app="ProperTea">
+    
+
+
+
+
+
+
+      <h1>New Tea</h1>
+    <form ng-controller = "objectNewCtrl">
+       <div class="form-group">
+            <label>Brands</label>
+            <input type="text" class="form-control" placeholder="brands" ng-model="newTea.Brands" />
+        </div>
+        <div class="form-group">
+            <label>Origin</label>
+            <input type="text" class="form-control" placeholder="country of origin" ng-model="newTea.Origin" />
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="text" class="form-control" placeholder="price" ng-model="newTea.Price" />
+        </div>
+        <div class="form-group">
+            <label>Tea</label>
+            <input type="text" class="form-control" placeholder="tea" ng-model="newTea.Tea" />
+        </div>
+        <div class="form-group">
+            <label>TeaWord</label>
+            <input type="text" class="form-control" placeholder="teaword keyword" ng-model="newTea.TeaWords" />
+        </div>
+        <!-- TODO: bind this button to a function -->
+        <button class="btn btn-default" ng-click="addNewItem()">Submit Tea</button>
+    </form>
+
+
+
+    <script src="app/app.js"></script>
+    <script src="app/values/fb-creds.js"></script>
+    <script type="text/javascript" src="lib/bower_components/firebase/firebase.js">
+    </script>
+    <script src="app/factories/objectFactory.js"></script>
+    <script src="app/controllers/objectNewCtrl.js"></script>
+</body>"
+
+</html>
