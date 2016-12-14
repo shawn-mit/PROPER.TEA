@@ -1,17 +1,13 @@
 "use strict";
-
+   
 app.controller("objectNewCtrl", function($scope, objectFactory) {
     $scope.newTea = {
-
         Brands: "",
         Origin: "",
         Price: "",
         Tea: "",
         TeaWords: ""
-
     };
-
-
 
     $scope.addNewItem = function () {
        // console.log($scope.newTea);
@@ -21,9 +17,8 @@ app.controller("objectNewCtrl", function($scope, objectFactory) {
 
 });
 
-        //console.log("add a new item", $scope.newTask);
+       
 
+        //console.log("add a new item", $scope.newTask);
+       //$scope.$apply();
             
-                //$scope.$apply();
-            
-        // $scope.newTask = {};

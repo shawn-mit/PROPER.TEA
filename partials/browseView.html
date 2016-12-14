@@ -1,0 +1,13 @@
+<!-- TEA: Repeat over our tea list teas and setup filtering by search term. -->
+
+
+<!--This will be the  Browse Teas page once the user logs in and authenticates. -->
+<h1> Browse Teas </h1>
+<h3> Find your favorite tea to purchase now or save to your account wishlist. </h3>
+<div>
+    <div ng-repeat = "teas in teaList">
+        <button class="btn btn-default" ng-click="getTeas()">Get Tea</button>
+    </div>
+</div>
+
+

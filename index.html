@@ -1,55 +1,54 @@
 <!DOCTYPE html>
 <html>
+<!--LINK TAGS AND ANGULAR SCRIPTS -->
 
 <head>
-    <title>proper.Tea</title>
+    <title>Proper.Tea</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="">
     <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+ 
 </head>
+<!--HTML || INJECT PARTIAL VIEWS-->
 
 <body ng-app="ProperTea">
-    
+    <!-- KEEP BODY TAG LINKED TO APP -->
+   <!-- <div ng-include="'partials/navbar.html'"></div> -->
+    <!-- INCLUDE NAVBAR ON ALL PAGES 
 
-
-
-
-
-
-      <h1>New Tea</h1>
-    <form ng-controller = "objectNewCtrl">
-       <div class="form-group">
-            <label>Brands</label>
-            <input type="text" class="form-control" placeholder="brands" ng-model="newTea.Brands" />
+        <div class= "teas-in-row">
+         <div class= "col-md-12" ng-view></div>
         </div>
-        <div class="form-group">
-            <label>Origin</label>
-            <input type="text" class="form-control" placeholder="country of origin" ng-model="newTea.Origin" />
-        </div>
-        <div class="form-group">
-            <label>Price</label>
-            <input type="text" class="form-control" placeholder="price" ng-model="newTea.Price" />
-        </div>
-        <div class="form-group">
-            <label>Tea</label>
-            <input type="text" class="form-control" placeholder="tea" ng-model="newTea.Tea" />
-        </div>
-        <div class="form-group">
-            <label>TeaWord</label>
-            <input type="text" class="form-control" placeholder="teaword keyword" ng-model="newTea.TeaWords" />
-        </div>
-        <!-- TODO: bind this button to a function -->
-        <button class="btn btn-default" ng-click="addNewItem()">Submit Tea</button>
-    </form>
+        
+
+    -->
+
+
+    <!--GET TEA BUTTON WILL NOT BE USED-->
+    <h1> Browse Teas </h1>
+    <h3> Find your favorite tea to purchase or save to your account. </h3>
+    <div ng-controller="teaCtrl">
+        <button class="btn btn-default" ng-click="getTeas()">Get Tea</button> 
 
 
 
+    <!-- SCRIPT TAGS -->
+
+    <!-- ESSENTIAL PAGES -->
     <script src="app/app.js"></script>
     <script src="app/values/fb-creds.js"></script>
     <script type="text/javascript" src="lib/bower_components/firebase/firebase.js">
     </script>
+    <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--- FACTORIES -->
     <script src="app/factories/objectFactory.js"></script>
+   <!-- <script src="app/factories/authFactory.js"></script>-->
+    <!--CONTROLLERS -->
+    <script src="app/controllers/teaCtrl.js"></script>
     <script src="app/controllers/objectNewCtrl.js"></script>
-</body>"
+   <!-- <script src="app/controllers/authCtrl.js"></script>-->
+</body>
 
 </html>

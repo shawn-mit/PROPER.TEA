@@ -1,0 +1,17 @@
+<section ng-controller "authCtrl.js"  class="auth-form">
+    <h1> proper.Tea </h1>
+    <h2> Login | Register </h2>
+
+    <div>
+        Email:
+        <input type="text" autofocus="true" ng-model="account.email">
+    </div>
+    <div>
+        Password:
+        <input type="password" ng-model="account.password">
+    </div>
+    <div>
+        <button class="btn btn-info" ng-click="login()"> Login </button>
+        <button class="btn btn-default" ng-click="register()"> Register </button>
+    </div>
+</section>
