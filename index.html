@@ -4,51 +4,43 @@
 
 <head>
     <title>Proper.Tea</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="">
     <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
- 
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="">
 </head>
 <!--HTML || INJECT PARTIAL VIEWS-->
 
 <body ng-app="ProperTea">
     <!-- KEEP BODY TAG LINKED TO APP -->
-   <!-- <div ng-include="'partials/navbar.html'"></div> -->
+    <!-- <div ng-include="'partials/navbar.html'"></div> -->
     <!-- INCLUDE NAVBAR ON ALL PAGES 
 
+
+
+    <!--GET TEA BUTTON WILL NOT BE USED-->
+    
         <div class= "teas-in-row">
          <div class= "col-md-12" ng-view></div>
         </div>
         
 
-    -->
-
-
-    <!--GET TEA BUTTON WILL NOT BE USED-->
-    <h1> Browse Teas </h1>
-    <h3> Find your favorite tea to purchase or save to your account. </h3>
-    <div ng-controller="teaCtrl">
-        <button class="btn btn-default" ng-click="getTeas()">Get Tea</button> 
-
-
-
-    <!-- SCRIPT TAGS -->
-
-    <!-- ESSENTIAL PAGES -->
-    <script src="app/app.js"></script>
-    <script src="app/values/fb-creds.js"></script>
-    <script type="text/javascript" src="lib/bower_components/firebase/firebase.js">
-    </script>
-    <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!--- FACTORIES -->
-    <script src="app/factories/objectFactory.js"></script>
-   <!-- <script src="app/factories/authFactory.js"></script>-->
-    <!--CONTROLLERS -->
-    <script src="app/controllers/teaCtrl.js"></script>
-    <script src="app/controllers/objectNewCtrl.js"></script>
-   <!-- <script src="app/controllers/authCtrl.js"></script>-->
+        <!-- SCRIPT TAGS -->
+        <!-- ESSENTIAL PAGES -->
+        <script src="app/app.js"></script>
+        <script src="app/values/fb-creds.js"></script>
+        <script type="text/javascript" src="lib/bower_components/firebase/firebase.js">
+        </script>
+        <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!--- FACTORIES -->
+        <script src="app/factories/objectFactory.js"></script>
+        <!-- <script src="app/factories/authFactory.js"></script>-->
+        <!--CONTROLLERS -->
+        <script src="app/controllers/teaCtrl.js"></script>
+        <script src="app/controllers/objectNewCtrl.js"></script>
+        <!-- <script src="app/controllers/authCtrl.js"></script>-->
 </body>
 
 </html>

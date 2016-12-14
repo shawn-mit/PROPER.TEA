@@ -5,9 +5,14 @@
 <h1> Browse Teas </h1>
 <h3> Find your favorite tea to purchase now or save to your account wishlist. </h3>
 <div>
-    <div ng-repeat = "teas in teaList">
         <button class="btn btn-default" ng-click="getTeas()">Get Tea</button>
-    </div>
+    <div ng-repeat = "tea in teaList"> {{tea.Brands}}   </div>
 </div>
 
 
+    <div ng-repeat = "tea in teaList"> {{tea.Keyword}}   </div>
+    <div ng-repeat = "tea in teaList"> {{tea.Origin}}   </div>
+    <div ng-repeat = "tea in teaList"> {{tea.Price}}   </div>
+    <div ng-repeat = "tea in teaList"> {{tea.TEA_ID}}   </div>
+    <div ng-repeat = "tea in teaList"> {{tea.Tea}}   </div>
+   

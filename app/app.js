@@ -20,14 +20,15 @@ let isAuth = (authFactory) => new Promise((resolve, reject) => {
 
 
 app.config(function($routeProvider) {
-    $routeProvider.when('/items/list', {
+    $routeProvider.when('/', {
             templateUrl: 'partials/browseView.html',
             controller: 'teaCtrl'
            //not for mvp --> resolve: {isAuth}
         })
-        .when('/items/new', {
+      });
+        /*.when('/items/new', {
             templateUrl: 'partials/item-form.html',
-            controller: 'itemNewCtrl'
+            controller: 'objectNewCtrl'
         })
         .when('/items/:itemId', {
             templateUrl: 'partials/item-details.html',
@@ -41,11 +42,12 @@ app.config(function($routeProvider) {
 });
 
 
+
 app.run(($location, FBCreds) => {
 
-    var creds = FBCreds;
+    let creds = FBCreds;
 
-    var authConfig = {
+    let authConfig = {
 
         apiKey: creds.apiKey,
         authDomain: creds.authDomain
@@ -54,3 +56,5 @@ app.run(($location, FBCreds) => {
     firebase.initializeApp(authConfig);
 
 });
+
+*/

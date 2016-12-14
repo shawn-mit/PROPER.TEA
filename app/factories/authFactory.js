@@ -1,7 +1,7 @@
-/*"use strict";
+"use strict";
 
 	
-app.factory("auth", function() {
+app.factory("authFactory", function() {
 
     let currentUser = null;
 
@@ -50,4 +50,3 @@ return {
 };
 
 });
-*/
