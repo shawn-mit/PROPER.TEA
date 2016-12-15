@@ -2,17 +2,17 @@
 
 
 
-app.controller('navCtrl', function($scope, $location) {
+app.controller('navCtrl', function($scope) {
+    //$location
+    //$scope.filterTeas = function() {
 
-    $scope.filterTeas = function() {
 
+    //console.log("searching for..", $scope.searchText.search);
+    //$location.path('/browsetea?s=' + $scope.searchText.search);
+    //$location.replace();//$scope.$apply();
 
-        //console.log("searching for..", $scope.searchText.search);
-        $location.path('/browsetea?s=' + $scope.searchText.search);
-        $location.replace();//$scope.$apply();
-
-        //console.log($location);
-    };
+    //console.log($location);
+    //};
 
     $scope.navItems = [{
         name: "Login",

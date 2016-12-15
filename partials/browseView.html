@@ -1,5 +1,5 @@
 <!-- TEA: Repeat over our tea list teas and setup filtering by search term. -->
-<h1> Browse Teas </h1>
+<h1> browse[Tea] </h1>
 <h3> Find your favorite tea to purchase now or save to your account wishlist. </h3>
 <div>
     <!-- THIS NEEDS TO AUTO POPULATE ONCE USER IS AUTHENTICATED -->
@@ -16,7 +16,7 @@
             <div class="card-block">
                 <h4 class="card-title">{{tea.Tea}} </h4>
                 <h5>{{tea.Keyword}} </h5>
-                <h6 class="card-subtitle text-muted">{{tea.Brands}} {{tea.Price}}</h6>
+                <h6 class="card-subtitle text-muted">{{tea.Brands}} </br> {{tea.Price}}</h6>
             </div>
             <img ng-src="{{tea.Image}}">
             <div class="card-block">
@@ -26,5 +26,5 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-default" ng-click="getTeas()">Get Tea</button>
+    <button class="btn btn-default" ng-click="getTeas()"> available[Tea] </button>
     <!--END REPEAT OF CARDS -->

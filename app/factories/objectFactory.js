@@ -53,6 +53,7 @@ app.factory("objectFactory", ($http, FBCreds) => {
         });
     };
 
+
     /*
     let getSingleTeaId = (itemId) => {
         return new Promise((resolve, reject) => {

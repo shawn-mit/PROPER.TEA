@@ -9,10 +9,10 @@ let isAuth = (authFactory) => new Promise((resolve, reject) => {
         .then((userExists) => {
             if (userExists) {
                 resolve();
-                console.log("Resolved");
+                $window.alert("Welcome" + $scope.account);
             } else {
                 reject(); //redirect to landing page
-                alert("Please login to access");
+                $window.alert("Please login to access");
             }
         });
 });
@@ -38,6 +38,9 @@ app.config(function($routeProvider, $locationProvider) {
         .when("/propertea", {
             templateUrl: "partials/properTeaView.html",
             controller: "teaCtrl"
+        })
+        .when ("/logout", {
+            templateUrl: "partials/logoutView.html"
         })
         .otherwise("/");
 

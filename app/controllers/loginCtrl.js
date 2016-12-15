@@ -19,7 +19,7 @@ app.controller("loginCtrl", function($scope,  authFactory, $window) {
     };
 
     $scope.login = () => {
-            console.log("login with", $scope.account);
+            //console.log("login with", $scope.account);
         authFactory.logInUser($scope.account)
             .then((user) => {
                $window.location.href = '/';
