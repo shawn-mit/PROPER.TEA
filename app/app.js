@@ -9,10 +9,9 @@ let isAuth = (authFactory) => new Promise((resolve, reject) => {
         .then((userExists) => {
             if (userExists) {
                 resolve();
-                $window.alert("Welcome" + $scope.account);
             } else {
                 reject(); //redirect to landing page
-                $window.alert("Please login to access");
+                alert("Please login to access proper[Tea]");
             }
         });
 });
@@ -40,7 +39,8 @@ app.config(function($routeProvider, $locationProvider) {
             controller: "teaCtrl"
         })
         .when ("/logout", {
-            templateUrl: "partials/logoutView.html"
+            templateUrl: "partials/logoutView.html",
+            controller: "loginCtrl"
         })
         .otherwise("/");
 

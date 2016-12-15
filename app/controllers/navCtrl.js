@@ -3,8 +3,8 @@
 
 
 app.controller('navCtrl', function($scope) {
-    //$location
-    //$scope.filterTeas = function() {
+    
+    //$scope.filterTeas = function() {};
 
 
     //console.log("searching for..", $scope.searchText.search);

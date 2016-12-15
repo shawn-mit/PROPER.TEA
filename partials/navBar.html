@@ -21,11 +21,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <!-- Use Angular to loop through nav items -->
             <ul class="nav navbar-nav navbar-right">
-                <li class="btn btn-default"> <a href="/login">[login] | [register]</a></li>
-                <li class="btn btn-default"><a href="/dashboard"> account</a></li>
-                <li class="btn btn-default"> <a href="/browsetea">browse[Tea]</a></li>
-                <li class="btn btn-default"> <a href="/propertea">proper[Tea]</a></li>
-                <li class="btn btn-default"><a href="/logout"> [logout]</a></li>
+                <li class="btn btn-link"> <a href="/login">[login] | [register]</a></li>
+                <li class="btn btn-link"> <a href="/dashboard"> account</a></li>
+                <li class="btn btn-link"> <a href="/browsetea">browse[Tea]</a></li>
+                <li class="btn btn-link"> <a href="/propertea">proper[Tea]</a></li>
+                <!---SCOPE LOGINCTRL FOR LOGOUT() // CTRLS CAN BE NESTED-->
+                 <div ng-controller = "loginCtrl">
+                <li class="btn btn-link"><a ng-click="logout()" href="/logout"> [logout]</a></li>
+                </div>
             </ul>
            
         </div>

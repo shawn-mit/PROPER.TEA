@@ -8,23 +8,24 @@
         <p> {{tea.Origin}} </p>
         <p> {{tea.Price}} </p>
         <p> {{tea.Tea}} </p>
-    </div> -->
     <p>{{searchText.search}}</p>
+    </div> -->
+    <button class="btn btn-outline-info" ng-click="getTeas()"> available[Tea] </button>
     <!-- PRODUCT CARDS -->
-    <div ng-repeat="tea in teaList | filter: searchText.search">
-        <div class="card">
-            <div class="card-block">
-                <h4 class="card-title">{{tea.Tea}} </h4>
-                <h5>{{tea.Keyword}} </h5>
-                <h6 class="card-subtitle text-muted">{{tea.Brands}} </br> {{tea.Price}}</h6>
-            </div>
+    <div ng-repeat="tea in teaList">
+    <!--| filter: searchText.search-->
+        <!--CARD STARTS HERE -->
+        <div class="panel panel-default">
+            <div>
+                <h4 class="col-xs-1">{{tea.Tea}} | {{tea.Price}} </h4>
+                <h6 class="col-xs-2">{{tea.Brands}} </br> {{tea.Keyword}}</h6>
+            </div class="col-md-2">
             <img ng-src="{{tea.Image}}">
-            <div class="card-block">
-                <p class="card-text">{{tea.Origin}} {{tea.Desc}}</p>
+            <div>
+                <p>{{tea.Origin}} {{tea.Desc}}</p>
                 <a href="#" class="card-link"> Purchase </a>
                 <a href="#" class="card-link"> Wishlist </a>
             </div>
         </div>
-    </div>
-    <button class="btn btn-default" ng-click="getTeas()"> available[Tea] </button>
-    <!--END REPEAT OF CARDS -->
+    </div>     <!--END REPEAT OF CARDS -->
+
