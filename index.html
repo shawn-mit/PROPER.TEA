@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html>
 <!--LINK TAGS AND ANGULAR SCRIPTS -->
+<html lang="en" ng-app="ProperTea">
 
 <head>
     <title>Proper.Tea</title>
+    <meta charset="UTF-8">
     <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
     <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="">
 </head>
 <!--HTML || INJECT PARTIAL VIEWS-->
 
-<body ng-app="ProperTea">
-    <!-- KEEP BODY TAG LINKED TO APP -->
+<body>
     <!-- <div ng-include="'partials/navbar.html'"></div> -->
-    <!-- INCLUDE NAVBAR ON ALL PAGES 
-
-
-
-    <!--GET TEA BUTTON WILL NOT BE USED-->
-    
-        <div class= "teas-in-row">
-         <div class= "col-md-12" ng-view></div>
-        </div>
-        
-
-        <!-- SCRIPT TAGS -->
-        <!-- ESSENTIAL PAGES -->
-        <script src="app/app.js"></script>
-        <script src="app/values/fb-creds.js"></script>
-        <script type="text/javascript" src="lib/bower_components/firebase/firebase.js">
-        </script>
-        <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!--- FACTORIES -->
-        <script src="app/factories/objectFactory.js"></script>
-        <!-- <script src="app/factories/authFactory.js"></script>-->
-        <!--CONTROLLERS -->
-        <script src="app/controllers/teaCtrl.js"></script>
-        <script src="app/controllers/objectNewCtrl.js"></script>
-        <!-- <script src="app/controllers/authCtrl.js"></script>-->
+    <!-- INCLUDE NAVBAR ON ALL PAGES-->
+    <p><a href="#/">Login || Register</a></p>
+    <a href="#dashboard"> dashboard </a>
+    <a href="#browsetea">browse.tea</a>
+    <a href="#propertea">proper.tea</a>
+    <ng-view>
+    <!--INJECT VIEWS-->
+    </ng-view>
+    <!-- SCRIPT TAGS -->
+    <!-- ESSENTIAL PAGES -->
+    <script src="app/app.js"></script>
+    <script src="app/values/fb-creds.js"></script>
+    <script type="text/javascript" src="lib/bower_components/firebase/firebase.js">
+    </script>
+    <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--- FACTORIES -->
+    <script src="app/factories/objectFactory.js"></script>
+    <script src="app/factories/authFactory.js"></script>
+    <!--CONTROLLERS -->
+    <script src="app/controllers/loginCtrl.js"></script>
+    <script src="app/controllers/teaCtrl.js"></script>
+    <script src="app/controllers/objectNewCtrl.js"></script>
 </body>
 
 </html>

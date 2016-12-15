@@ -1,12 +1,12 @@
 "use strict";
 
+// Posting NewTeas.json for FB to issue key for JSON objects. 
+//getters and setters done inside a factory 
 
 app.factory("objectFactory", ($http, FBCreds) => {
-    // Posting NewTeas.json for FB to issue key for JSON objects. 
-    //getters and setters done inside a factory 
-    let postNewItem = (newTea) => {
+    let postNewItem = (newUser) => {
         return new Promise((resolve, reject) => {
-            $http.post(`${FBCreds.URL}/NewTeas.json`, angular.toJson(newTea))
+            $http.post(`${FBCreds.URL}/NewUser.json`, angular.toJson(newUser))
                 .success((obj) => {
                     resolve(obj);
 
@@ -15,14 +15,15 @@ app.factory("objectFactory", ($http, FBCreds) => {
                     reject(error);
                 });
         });
-        
+
         //items.push(newTask);
 
     };
 
+    //GRAB TEAS IN ARRAY //
 
     let getTeas = () => {
-        
+
 
         let results = [];
         //empty array once I grab json objects from FB then push back into results
@@ -36,7 +37,7 @@ app.factory("objectFactory", ($http, FBCreds) => {
                 let itemCollection = teaListJson;
 
                 Object.keys(itemCollection).forEach((key) => {
-                   // console.log(key);
+                    // console.log(key);
 
 
                     results.push(itemCollection[key]);
@@ -52,7 +53,7 @@ app.factory("objectFactory", ($http, FBCreds) => {
         });
     };
 
-
+    /*
     let getSingleTeaId = (itemId) => {
         return new Promise((resolve, reject) => {
             $http.get(`${FBCreds.URL}/NewTeas/${itemId}.json`)
@@ -64,12 +65,12 @@ app.factory("objectFactory", ($http, FBCreds) => {
                 });
         });
     };
-
+    */
 
     return {
         postNewItem,
-        getTeas,
-        getSingleTeaId
+        getTeas
+        //getSingleTeaId
     };
 
 });

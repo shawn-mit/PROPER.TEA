@@ -1,18 +1,31 @@
 <!-- TEA: Repeat over our tea list teas and setup filtering by search term. -->
-
-
 <!--This will be the  Browse Teas page once the user logs in and authenticates. -->
 <h1> Browse Teas </h1>
 <h3> Find your favorite tea to purchase now or save to your account wishlist. </h3>
 <div>
-        <button class="btn btn-default" ng-click="getTeas()">Get Tea</button>
-    <div ng-repeat = "tea in teaList"> {{tea.Brands}}   </div>
-</div>
+    <!-- THIS NEEDS TO AUTO POPULATE ONCE USER IS AUTHENTICATED -->
+    <button class="btn btn-default" ng-click="getTeas()">Get Tea</button>
+    <!--<div ng-repeat="tea in teaList"> {{tea.Brands}}
+        <p>{{tea.Keyword}} </p>
+        <p> {{tea.Origin}} </p>
+        <p> {{tea.Price}} </p>
+        <p> {{tea.Tea}} </p>
+    </div> -->
 
 
-    <div ng-repeat = "tea in teaList"> {{tea.Keyword}}   </div>
-    <div ng-repeat = "tea in teaList"> {{tea.Origin}}   </div>
-    <div ng-repeat = "tea in teaList"> {{tea.Price}}   </div>
-    <div ng-repeat = "tea in teaList"> {{tea.TEA_ID}}   </div>
-    <div ng-repeat = "tea in teaList"> {{tea.Tea}}   </div>
-   
+    <!-- PRODUCT CARDS -->
+    <div ng-repeat="tea in teaList">
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">{{tea.Tea}} </h4>
+                <h6 class="card-subtitle text-muted">{{tea.Brands}} {{tea.Price}}</h6>
+            </div>
+            <img ng-src="{{tea.Image}}">
+            <div class="card-block">
+                <p class="card-text">{{tea.Origin}} {{tea.Desc}}</p>
+                <a href="#" class="card-link"> Purchase </a>
+                <a href="#" class="card-link"> Wishlist </a>
+            </div>
+        </div>
+    </div>
+    <!--END REPEAT OF CARDS -->

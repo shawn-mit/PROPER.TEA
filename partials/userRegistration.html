@@ -1,0 +1,28 @@
+<!--CREATE USER OBJECT AND  FORM TO CREATE USER PROFILES. USED TO SCALE APPLICATION FOR NEW FEATURES AND ECOSYSTEM-->
+
+<h1> Proper.Tea Profile </h1>
+
+<form>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" placeholder="What should we call you?" ng-model="newUser.UserName" />
+    </div>
+    <div class="form-group">
+        <label>Mood</label>
+        <input type="text" class="form-control" placeholder="Describe your mood, please?" ng-model="newUser.Mood" />
+    </div>
+    <div class="form-group">
+        <label>Favorite Tea</label>
+        <input type="text" class="form-control" placeholder="Do you have a favorite tea?" ng-model="newUser.FavoriteTea" />
+    </div>
+    <div class="form-group">
+        <label>Favorite Brand</label>
+        <input type="text" class="form-control" placeholder="What is your favorite brand?" ng-model="newUser.FavoriteBrand" />
+    </div>
+    <div class="form-group">
+        <label>Maximum Budget</label>
+        <input type="number" min="1" max="1000" class="form-control" placeholder="What is your max budget (dollar amount)?" ng-model="newUser.PriceRange" />
+    </div>
+    <!-- TODO: bind this button to a function -->
+    <button class="btn btn-default" ng-click="addNewUser()"> Save Profile</button>
+</form>

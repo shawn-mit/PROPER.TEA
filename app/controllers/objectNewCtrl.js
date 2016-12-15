@@ -1,17 +1,16 @@
 "use strict";
    
 app.controller("objectNewCtrl", function($scope, objectFactory) {
-    $scope.newTea = {
-        Brands: "",
-        Origin: "",
-        Price: "",
-        Tea: "",
-        TeaWords: ""
+    $scope.newUser = {
+        Mood: "",
+        FavoriteTea: "",
+        FavoriteBrand: "",
+        PriceRange: ""
     };
 
-    $scope.addNewItem = function () {
+    $scope.addNewUser = function () {
        // console.log($scope.newTea);
-    objectFactory.postNewItem($scope.newTea);
+    objectFactory.postNewItem($scope.newUser);
         
     };
 
