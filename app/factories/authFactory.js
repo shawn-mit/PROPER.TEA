@@ -1,5 +1,4 @@
 "use strict";
-var ref = new Firebase("https://demo.firebaseio-demo.com");
 
 	
 app.factory("authFactory", function() {
@@ -18,12 +17,13 @@ let logInUser = function(userObj) {
 
 
 let logOutUser = function() {
-    return firebase.auth().signOut().then(function(){
+    return firebase.auth().signOut();
+    /*.then(function(){
             console.log('Signed Out');
         }, function (error) {
             console.log('Sign Out Error', error);
         
-        });
+        });*/
 };
 
 let isAuthenticated = function() {

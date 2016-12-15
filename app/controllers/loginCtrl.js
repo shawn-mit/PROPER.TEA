@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("loginCtrl", function($scope, authFactory, $window) {
+app.controller("loginCtrl", function($scope,  authFactory, $window) {
 
     $scope.account = {
         email: null,
@@ -12,18 +12,18 @@ app.controller("loginCtrl", function($scope, authFactory, $window) {
 
         authFactory.createUser($scope.account)
             .then((userData) => {
-
                 $scope.login();
 
             });
-
+        
     };
 
     $scope.login = () => {
-        authFactory.loginUser($scope.account)
+            console.log("login with", $scope.account);
+        authFactory.logInUser($scope.account)
             .then((user) => {
                $window.location.href = '/';
             });
     };
 
-}); 
+});

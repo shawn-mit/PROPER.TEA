@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!--LINK TAGS AND ANGULAR SCRIPTS -->
-<html lang="en" ng-app="ProperTea">
+<html lang="en">
 
 <head>
     <title>Proper.Tea</title>
@@ -10,19 +10,34 @@
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
     <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <base href="/">
+
 </head>
 <!--HTML || INJECT PARTIAL VIEWS-->
 
-<body>
-    <!-- <div ng-include="'partials/navbar.html'"></div> -->
+<body ng-app="ProperTea">
+    <div ng-include="'partials/navBar.html'">
+    </div>
+
     <!-- INCLUDE NAVBAR ON ALL PAGES-->
-    <p><a href="#/">Login || Register</a></p>
-    <a href="#dashboard"> dashboard </a>
-    <a href="#browsetea">browse.tea</a>
-    <a href="#propertea">proper.tea</a>
-    <ng-view>
+    <!--<a href="#/">Login || Register</a>
+    <a href="#/dashboard"> dashboard </a>
+    <a href="#/browsetea">browse.tea</a>
+    <a href="#propertea">proper.tea</a>-->
+        
+    <div ng-view>
+
+
     <!--INJECT VIEWS-->
-    </ng-view>
+
+        
+    </div> 
+        
+
+
+
+   
     <!-- SCRIPT TAGS -->
     <!-- ESSENTIAL PAGES -->
     <script src="app/app.js"></script>
@@ -37,6 +52,7 @@
     <!--CONTROLLERS -->
     <script src="app/controllers/loginCtrl.js"></script>
     <script src="app/controllers/teaCtrl.js"></script>
+    <script src="app/controllers/navCtrl.js"></script>
     <script src="app/controllers/objectNewCtrl.js"></script>
 </body>
 

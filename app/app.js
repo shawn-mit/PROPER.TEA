@@ -1,31 +1,47 @@
-
-"use strict" ; 
+"use strict";
 
 let app = angular.module("ProperTea", ["ngRoute"]);
 
 
+let isAuth = (authFactory) => new Promise((resolve, reject) => {
 
-app.config(function($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "loginView.html",
-        controller: "loginCtrl"
-    })
-    .when("/#dashboard", {
-        templateUrl : "userRegistration.html",
-        controller: "objectNewCtrl"
-    })
-    .when("/browsetea", {
-        templateUrl : "browseView.html",
-                controller: "teaCtrl"
+    authFactory.isAuthenticated()
+        .then((userExists) => {
+            if (userExists) {
+                resolve();
+                console.log("Resolved");
+            } else {
+                reject(); //redirect to landing page
+                alert("Please login to access");
+            }
+        });
+});
 
-    })
-    .when("/propertea", {
-        templateUrl : "properTeaView.html",
-                controller: "teaCtrl"
+app.config(function($routeProvider, $locationProvider) {
+    $routeProvider.when("/", {
+            templateUrl: "partials/landingPage.html"
+        }).when("/login", {
+            templateUrl: "partials/loginView.html",
+            controller: "loginCtrl"
+        })
+        .when("/dashboard", {
+            templateUrl: "partials/userRegistration.html",
+            controller: "objectNewCtrl",
+            resolve: {
+                isAuth
+            }
+        })
+        .when("/browsetea", {
+            templateUrl: "partials/browseView.html",
+            controller: "teaCtrl"
+        })
+        .when("/propertea", {
+            templateUrl: "partials/properTeaView.html",
+            controller: "teaCtrl"
+        })
+        .otherwise("/");
 
-    })
-    .otherwise("/");
+    $locationProvider.html5Mode(true);
 });
 
 // HAVE THE APPLICATION TELL FIREBASE  WE ARE ABOUT TO WORK TOGETHER //
@@ -45,17 +61,5 @@ app.run(($location, FBCreds) => {
 });
 
 /*
-
-let isAuth = (authFactory) => new Promise((resolve, reject) => {
-
-    authFactory.isAuthenticated()
-        .then((userExists) => {
-            if (userExists) {
-                resolve();
-            } else {
-                reject();
-            }
-        });
-});
-
-*/
+ 
+ */
