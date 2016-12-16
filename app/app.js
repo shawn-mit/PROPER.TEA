@@ -60,7 +60,3 @@ app.run(($location, FBCreds) => {
     firebase.initializeApp(authConfig);
 
 });
-
-/*
- 
- */

@@ -9,22 +9,22 @@
             </button>
             <a class="navbar-brand" href="/"> proper[Tea] </a>
         </div>
-        <div class="col-xs-6 searchBox">
-            <div class="input-group">
+        <!--<div class="col-xs-6 searchBox">
+           <div class="input-group">
                 <span class="input-group-btn">
-          <button ng-click="filterTeas()" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+          <button class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
         </span>
                 <input type="text" class="form-control" placeholder="Search Teas" ng-model="searchText.search">
             </div>
-        </div>
+        </div> -->
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <!-- Use Angular to loop through nav items -->
             <ul class="nav navbar-nav navbar-right">
                 <li class="btn btn-link"> <a href="/login">[login] | [register]</a></li>
                 <li class="btn btn-link"> <a href="/dashboard"> account</a></li>
-                <li class="btn btn-link"> <a href="/browsetea">browse[Tea]</a></li>
-                <li class="btn btn-link"> <a href="/propertea">proper[Tea]</a></li>
+                <li class="btn btn-link"> <a href="/browsetea">proper[Tea]</a></li>
+                <!--<li class="btn btn-link"> <a href="/propertea">proper[Tea]</a></li>-->
                 <!---SCOPE LOGINCTRL FOR LOGOUT() // CTRLS CAN BE NESTED-->
                  <div ng-controller = "loginCtrl">
                 <li class="btn btn-link"><a ng-click="logout()" href="/logout"> [logout]</a></li>

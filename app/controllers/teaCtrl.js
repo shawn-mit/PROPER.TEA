@@ -2,7 +2,7 @@
 
 app.controller("teaCtrl", function($scope, objectFactory) {
    
-    //$scope.getTeas = function() {
+    $scope.getTeas = function() {
    
 
         objectFactory.getTeas().then((teaList) => {
@@ -10,9 +10,7 @@ app.controller("teaCtrl", function($scope, objectFactory) {
             $scope.teaList = teaList;
             $scope.$apply();
         });
-    //};
+    };
 }); 
 
 
-
-//write the teaList to the UI

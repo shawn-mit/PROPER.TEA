@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("loginCtrl", function($scope,  authFactory, $window) {
+app.controller("loginCtrl", function($scope, authFactory, $window) {
 
     $scope.account = {
         email: null,
@@ -15,25 +15,24 @@ app.controller("loginCtrl", function($scope,  authFactory, $window) {
                 $scope.login();
 
             });
-        
+
     };
 
     $scope.login = () => {
-            //console.log("login with", $scope.account);
+        //console.log("login with", $scope.account);
         authFactory.logInUser($scope.account)
             .then((user) => {
-               $window.location.href = '/dashboard';
+                $window.location.href = '/dashboard';
             });
     };
 
     $scope.logout = () => {
-            console.log("logged out");
+        console.log("logged out");
         authFactory.logOutUser($scope.account)
             .then((user) => {
-                $window.location.href= '#/';
+                $window.location.href = '#/';
                 console.log("logged out");
             });
     };
 
 });
-

@@ -1,5 +1,7 @@
 "use strict";
    
+
+  //USERS CAN ADD A QUICK SURVEY FOR  
 app.controller("objectNewCtrl", function($scope, objectFactory) {
     $scope.newUser = {
         Mood: "",
@@ -11,13 +13,11 @@ app.controller("objectNewCtrl", function($scope, objectFactory) {
     $scope.addNewUser = function () {
        // console.log($scope.newTea);
     objectFactory.postNewItem($scope.newUser);
-        
+        alert("Your profile has been saved")
     };
 
 });
 
        
 
-        //console.log("add a new item", $scope.newTask);
-       //$scope.$apply();
-            
+      
