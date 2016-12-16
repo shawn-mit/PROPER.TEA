@@ -26,9 +26,7 @@ app.config(function($routeProvider, $locationProvider) {
         .when("/dashboard", {
             templateUrl: "partials/userRegistration.html",
             controller: "objectNewCtrl",
-            resolve: {
-                isAuth
-            }
+            resolve: {isAuth }
         })
         .when("/browsetea", {
             templateUrl: "partials/browseView.html",

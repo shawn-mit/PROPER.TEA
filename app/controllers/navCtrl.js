@@ -5,7 +5,7 @@
 app.controller('navCtrl', function($scope) {
     
     //$scope.filterTeas = function() {};
-
+    
 
     //console.log("searching for..", $scope.searchText.search);
     //$location.path('/browsetea?s=' + $scope.searchText.search);

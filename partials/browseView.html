@@ -1,19 +1,14 @@
 <!-- TEA: Repeat over our tea list teas and setup filtering by search term. -->
 <h1> browse[Tea] </h1>
+<!--<div ng-model > {{filtertext}} </div>-->
 <h3> Find your favorite tea to purchase now or save to your account wishlist. </h3>
 <div>
     <!-- THIS NEEDS TO AUTO POPULATE ONCE USER IS AUTHENTICATED -->
-    <!--<div ng-repeat="tea in teaList"> {{tea.Brands}}
-        <p>{{tea.Keyword}} </p>
-        <p> {{tea.Origin}} </p>
-        <p> {{tea.Price}} </p>
-        <p> {{tea.Tea}} </p>
-    <p>{{searchText.search}}</p>
-    </div> -->
+ 
     <button class="btn btn-outline-info" ng-click="getTeas()"> available[Tea] </button>
     <!-- PRODUCT CARDS -->
-    <div ng-repeat="tea in teaList">
-    <!--| filter: searchText.search-->
+    <input ng-model ='query' type="text" class="input" placeholder="Please describe your mood." />
+    <div ng-repeat="tea in teaList | filter:query ">
         <!--CARD STARTS HERE -->
         <div class="panel panel-default">
             <div>
@@ -27,5 +22,5 @@
                 <a href="#" class="card-link"> Wishlist </a>
             </div>
         </div>
-    </div>     <!--END REPEAT OF CARDS -->
-
+    </div>
+    <!--END REPEAT OF CARDS -->
